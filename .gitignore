@@ -1,0 +1,7 @@
+*.iml
+.DS_Store
+.externalNativeBuild
+/build
+/captures
+/.idea/workspace.xml
+/.idea/libraries
