@@ -1,4 +1,4 @@
-package org.ecloga.androidutils;
+package org.ecloga.sms;
 
 import android.app.Activity;
 import android.content.IntentFilter;
@@ -18,7 +18,9 @@ public class SmsActivity extends Activity {
 
         new SmsPermission(this).requestPermission();
 
-        smsReceiver = new SmsReceiver(BuildConfig.SERVICE_NUMBER);
+        smsReceiver = new SmsReceiver();
+        //smsReceiver.setNumber(BuildConfig.SERVICE_NUMBER);
+        smsReceiver.setNumber(null);
         smsReceiver.setListener(new SmsReceiver.Listener() {
             @Override
             public void onSmsReceived(String message) {

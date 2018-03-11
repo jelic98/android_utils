@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidUtils</string>
+    <string name="app_name">SMS Receiver</string>
     <string name="caption_listen">Listening for SMS</string>
     <string name="caption_sender">Sender:</string>
 </resources>

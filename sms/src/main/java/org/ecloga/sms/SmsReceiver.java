@@ -1,4 +1,4 @@
-package org.ecloga.androidutils;
+package org.ecloga.sms;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,20 +8,19 @@ import android.os.Bundle;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
 import android.util.Log;
+import android.widget.Toast;
 
-class SmsReceiver extends BroadcastReceiver {
+public class SmsReceiver extends BroadcastReceiver {
 
     private static final String TAG = "SMS Receiver";
 
     private Listener listener;
-    private String serviceProviderNumber;
-
-    SmsReceiver(String serviceProviderNumber) {
-        this.serviceProviderNumber = serviceProviderNumber;
-    }
+    private String number;
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        Log.i(TAG, "Message received");
+
         if (intent.getAction().equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) {
             String sender = "";
             StringBuilder body = new StringBuilder();
@@ -34,7 +33,7 @@ class SmsReceiver extends BroadcastReceiver {
             } else {
                 Bundle smsBundle = intent.getExtras();
 
-                if(smsBundle != null) {
+                if (smsBundle != null) {
                     Object[] pdus = (Object[]) smsBundle.get("pdus");
 
                     if (pdus == null) {
@@ -53,17 +52,23 @@ class SmsReceiver extends BroadcastReceiver {
                 }
             }
 
-            if (sender.equals(serviceProviderNumber) && listener != null) {
-                listener.onSmsReceived(body.toString());
+            if (listener != null) {
+                if (number == null || sender.equals(number)) {
+                    listener.onSmsReceived(body.toString());
+                }
             }
         }
     }
 
-    void setListener(Listener listener) {
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public void setListener(Listener listener) {
         this.listener = listener;
     }
 
-    interface Listener {
-        void onSmsReceived(String text);
+    public interface Listener {
+        void onSmsReceived(String message);
     }
 }

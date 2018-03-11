@@ -1,1 +1,1 @@
-include ':sms'
+include ':sms', ':qr', ':speech'

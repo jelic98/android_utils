@@ -1,4 +1,4 @@
-package org.ecloga.androidutils;
+package org.ecloga.sms;
 
 import android.Manifest;
 import android.app.Activity;
@@ -6,13 +6,13 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 
-class SmsPermission implements ActivityCompat.OnRequestPermissionsResultCallback {
+public class SmsPermission implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     private static final int SMS_PERMISSION_CODE = 1;
 
     private Activity activity;
 
-    SmsPermission(Activity activity) {
+    public SmsPermission(Activity activity) {
         this.activity = activity;
     }
 
@@ -20,7 +20,7 @@ class SmsPermission implements ActivityCompat.OnRequestPermissionsResultCallback
         return (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1);
     }
 
-    void requestPermission() {
+    public void requestPermission() {
         if(shouldAskPermission()) {
             ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_SMS}, SMS_PERMISSION_CODE);
         }

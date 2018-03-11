@@ -8,34 +8,19 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0.0"
-        applicationId "org.ecloga.androidutils"
-        multiDexEnabled true
-        vectorDrawables.useSupportLibrary = true
-        generatedDensities = []
-    }
-    lintOptions {
-        abortOnError false
-        checkReleaseBuilds false
-    }
-    aaptOptions {
-        additionalParameters "--no-version-vectors"
+        applicationId "org.ecloga.sms"
     }
     buildTypes {
         release {
-            shrinkResources false
-            minifyEnabled false
             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "SERVICE_NUMBER", "123456789" // Change SERVICE_NUMBER value
+            buildConfigField "String", "SERVICE_NUMBER", "\"your_service_number\""
         }
 
         debug {
             debuggable true
-            buildConfigField "String", "SERVICE_NUMBER", "123456789" // Change SERVICE_NUMBER value
+            buildConfigField "String", "SERVICE_NUMBER", "\"your_service_number\""
         }
-    }
-    dexOptions {
-        javaMaxHeapSize "6g"
     }
 }
 
@@ -46,7 +31,6 @@ buildscript {
 }
 
 dependencies {
-    compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:appcompat-v7:27.0.0'
     compile 'com.android.support:design:27.0.0'
 }

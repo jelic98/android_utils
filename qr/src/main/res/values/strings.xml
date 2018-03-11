@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QR Scanner</string>
+    <string name="caption_scan">Scan</string>
+    <string name="caption_result">Scan result</string>
+    <string name="caption_error">Scan error</string>
+    <string name="caption_error_text">QR Code could not be scanned</string>
+</resources>
