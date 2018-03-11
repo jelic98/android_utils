@@ -8,14 +8,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_margin="10dp"
             android:inputType="text"
+            android:hint="@string/caption_hint"
             android:id="@+id/etText"/>
+
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/etText"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:id="@+id/spnLocale"/>
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/etText"
             android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
             android:text="@string/caption_speak"
             android:id="@+id/btnSpeak"/>
 

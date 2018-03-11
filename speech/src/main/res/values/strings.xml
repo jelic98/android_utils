@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Speech</string>
+    <string name="caption_hint">Enter some text</string>
     <string name="caption_speak">Speak out</string>
 </resources>
