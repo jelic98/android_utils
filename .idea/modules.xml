@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidUtils.iml" filepath="$PROJECT_DIR$/AndroidUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatbot/chatbot.iml" filepath="$PROJECT_DIR$/chatbot/chatbot.iml" />
       <module fileurl="file://$PROJECT_DIR$/qr/qr.iml" filepath="$PROJECT_DIR$/qr/qr.iml" />
       <module fileurl="file://$PROJECT_DIR$/sms/sms.iml" filepath="$PROJECT_DIR$/sms/sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/speech/speech.iml" filepath="$PROJECT_DIR$/speech/speech.iml" />

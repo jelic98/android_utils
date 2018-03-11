@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/chatbot" />
             <option value="$PROJECT_DIR$/qr" />
             <option value="$PROJECT_DIR$/sms" />
             <option value="$PROJECT_DIR$/speech" />

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "684888388693",
+    "firebase_url": "https://androidutils-3709d.firebaseio.com",
+    "project_id": "androidutils-3709d",
+    "storage_bucket": "androidutils-3709d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684888388693:android:814e4d59818288d7",
+        "android_client_info": {
+          "package_name": "org.ecloga.chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684888388693-m90svi2nrfrnsgt1idfql99i4ed1ctrm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuAZkdgOR4lfcH4T0WyGVqxZ7aX4ANnfA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
