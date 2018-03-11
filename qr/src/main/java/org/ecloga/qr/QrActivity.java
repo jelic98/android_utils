@@ -20,6 +20,8 @@ public class QrActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
+
+        new QrPermission(this).requestPermission();
     }
 
     @Override
